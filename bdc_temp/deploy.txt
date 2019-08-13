@@ -1,3 +1,10 @@
-curl https://raw.githubusercontent.com/Guillaume-Fourrat/redesigned-octo-couscous/master/bdc_temp/local-storage-provisioner.yaml>ocal-storage-provisioner.yaml
-curl https://raw.githubusercontent.com/Guillaume-Fourrat/redesigned-octo-couscous/master/bdc_temp/setup-volumes-agent.sh>setup-volumes-agent.sh
+#on each node :
+curl https://raw.githubusercontent.com/Guillaume-Fourrat/redesigned-octo-couscous/master/bdc_temp/local-storage-provisioner.yaml>local-storage-provisioner.yaml
+
 sudo source setup-volumes-agent.sh
+
+#on master :
+
+curl https://raw.githubusercontent.com/Guillaume-Fourrat/redesigned-octo-couscous/master/bdc_temp/setup-volumes-agent.sh>setup-volumes-agent.sh
+
+Against cluster : kubectl apply -f local-storage-provisioner.yaml
